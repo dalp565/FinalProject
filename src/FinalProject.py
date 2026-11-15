@@ -17,6 +17,7 @@ import pygame
 # For examples see the overframe builds and how users have set up their publicly available builds.
 #TODO: Save builds feature.
 #TODO: Custom icons for each warframe/companion.
+#TODO: Add music player.
 """ 
 RULES: 
 1. DO NOT ATTEMPT TO WRITE THIS ALONE. Ask for help when learning JSON and implementing it into the code.
