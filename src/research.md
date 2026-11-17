@@ -16,6 +16,9 @@ baraltech's guide to menus in pygame:
 Coding with Russ's guide to drag and drop in pygame:
 - https://www.youtube.com/watch?v=Ro82dac_J1Y
 
+Tech with Tim's guide to JSON:
+- https://www.youtube.com/watch?v=-51jxlQaxyA
+
 Pygame library:
 - Mouse and clicking/focused: https://www.pygame.org/docs/ref/key.html?highlight=text%20box
 - Custom shapes/drawing on the "surface": https://www.pygame.org/docs/ref/draw.html
@@ -34,6 +37,7 @@ Pygame library:
 
 ### Player-made API:
 - Warframe status API: https://docs.warframestat.us/ 
+- WFCD: https://github.com/WFCD/warframe-status
 - (A very big thanks to the community devs who built this website and API.)
 
 ### Overframe:

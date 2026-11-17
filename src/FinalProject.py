@@ -18,6 +18,7 @@ import pygame
 #TODO: Save builds feature.
 #TODO: Custom icons for each warframe/companion.
 #TODO: Add music player.
+#TODO: Use a GUI module to make the window re-sizeable.
 """ 
 RULES: 
 1. DO NOT ATTEMPT TO WRITE THIS ALONE. Ask for help when learning JSON and implementing it into the code.
