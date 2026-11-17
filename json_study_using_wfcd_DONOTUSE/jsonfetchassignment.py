@@ -30,7 +30,7 @@ def find_match_mods(mod_search, mods_list):
     #find items matching the user input
     mod_names = [
         item for item in mods_list 
-        if (polarity := item.get("polarity")) is not None and mod_search.lower() in item.get("polarity").lower()
+        if (mod_name := item.get("polarity")) is not None and mod_search.lower() in item.get("polarity").lower()
         ] or None
     #checks for null points with None.
     return mod_names
@@ -47,7 +47,7 @@ def main():
     running = True
     while running:
         # okay so here's where the user puts their input
-        user_input = input("\nEnter a name you want to find or enter quit to stop:")
+        user_input = input("\nEnter a name you want to find or enter quit to stop: ")
         if user_input.lower() == "quit":
             running = False
         #TODO: if =/= result print error msg
@@ -55,13 +55,22 @@ def main():
             mod_names = find_match_mods(user_input,all_mods)
             # If the null point is called print error msg
             if mod_names is None:
-                print("\nError operator, I don't think that's a mod polarity.")
-                time.sleep(0.1)
+                ERRORMESSAGE = "\nError Operator, I don't think that's a mod polarity.\n"
+                for character in ERRORMESSAGE:
+                    print(character, end="", flush=True )
+                    time.sleep(0.1)
+            # elif mod_names == ("name"):
+            #     print("\n Were you looking for this Operator?")
+            #     for result in mod_names
+            #         print(f"{result.get("name")}")
             else:
                 # Human for "here are the results I found"
-                print (f"\nMods with the polarity {user_input}:")
+                FOUNDMESSAGE = f"\nMods with the polarity {user_input}: \n"
+                for character in FOUNDMESSAGE:
+                    print ( character, end="", flush = True)
+                    time.sleep(0.1)
                 # prints results in a for loop indented
                 for result in mod_names:
-                    print (f"\t{result.get("name")}")
+                    print (f"\t{result.get("name")}", flush=True)
                     time.sleep(0.1)
 main()
