@@ -1,5 +1,6 @@
 import json
 import re
+import time
 
 import requests
 
@@ -46,7 +47,7 @@ def main():
     running = True
     while running:
         # okay so here's where the user puts their input
-        user_input = input("Enter a name you want to find or enter quit to stop:")
+        user_input = input("\nEnter a name you want to find or enter quit to stop:")
         if user_input.lower() == "quit":
             running = False
         #TODO: if =/= result print error msg
@@ -54,11 +55,13 @@ def main():
             mod_names = find_match_mods(user_input,all_mods)
             # If the null point is called print error msg
             if mod_names is None:
-                print("Error operator, I don't think that's a mod polarity.")
+                print("\nError operator, I don't think that's a mod polarity.")
+                time.sleep(0.1)
             else:
                 # Human for "here are the results I found"
-                print (f"Mods with the polarity {user_input}:")
+                print (f"\nMods with the polarity {user_input}:")
                 # prints results in a for loop indented
                 for result in mod_names:
                     print (f"\t{result.get("name")}")
+                    time.sleep(0.1)
 main()
